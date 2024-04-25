@@ -9,12 +9,8 @@ import Foundation
 import VisionKit
 import Vision
 
-class Scanner: NSObject, ObservableObject {
-    @Published var text = ""
-    @Published var image: UIImage = UIImage(named: "test")!
+class Scanner {
     
-    override init() {
-    }
     
     func recognizeText(image: UIImage?, completion: @escaping (String) -> ())  {
         guard let cgImage = image?.cgImage else {
@@ -23,7 +19,7 @@ class Scanner: NSObject, ObservableObject {
         
         let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
         
-        let request = VNRecognizeTextRequest { [weak self] request, error in
+        let request = VNRecognizeTextRequest { request, error in
             
             guard let observations = request.results as? [VNRecognizedTextObservation],
                   error == nil else{
@@ -35,7 +31,6 @@ class Scanner: NSObject, ObservableObject {
             }).joined(separator: "\n")
 
             DispatchQueue.main.async {
-                self?.text = text
                 completion(text)
             }
         }
@@ -56,7 +51,6 @@ class Scanner: NSObject, ObservableObject {
         do{
             try handler.perform([request])
         } catch {
-            text = "\(error)"
             print(error)
         }
     }
