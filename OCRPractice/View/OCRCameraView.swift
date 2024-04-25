@@ -18,6 +18,7 @@ struct OCRCameraView: View {
             VStack {
                 VStack {
                     Text("사각형에 카드를 맞추면\nOCR로 text를 가져올 수 있습니다.")
+                        .multilineTextAlignment(.center)
                     
                 }
                 .padding(.top, 64)

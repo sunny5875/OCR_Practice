@@ -108,13 +108,11 @@ extension CameraViewModel: AVCapturePhotoCaptureDelegate {
         ) ?? image
         
         self.cropImage = cropData
-        self.ocrText = scanner.recognizeText(image: cropData)
-        
-        if !self.ocrText.isEmpty {
+        scanner.recognizeText(image: cropData) {
+            self.ocrText = $0
             self.isDone = true
+            print("[CameraModel]: Capture routine's done \(self.ocrText)")
         }
-        
-        print("[CameraModel]: Capture routine's done \(ocrText)")
     }
     
     private func cropToPreviewLayer(from originalImage: UIImage, toSizeOf rect: CGRect) -> UIImage? {

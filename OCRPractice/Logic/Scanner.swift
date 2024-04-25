@@ -16,7 +16,7 @@ class Scanner: NSObject, ObservableObject {
     override init() {
     }
     
-     func recognizeText(image: UIImage?) -> String {
+    func recognizeText(image: UIImage?, completion: @escaping (String) -> ())  {
         guard let cgImage = image?.cgImage else {
             fatalError("could not get image")
         }
@@ -36,6 +36,7 @@ class Scanner: NSObject, ObservableObject {
 
             DispatchQueue.main.async {
                 self?.text = text
+                completion(text)
             }
         }
    
@@ -54,11 +55,9 @@ class Scanner: NSObject, ObservableObject {
     
         do{
             try handler.perform([request])
-            return text
         } catch {
             text = "\(error)"
             print(error)
         }
-         return text
     }
 }

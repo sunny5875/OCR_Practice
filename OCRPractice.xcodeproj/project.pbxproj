@@ -13,7 +13,6 @@
 		D685C6F42BD8E930009AB097 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685C6F32BD8E930009AB097 /* Extension.swift */; };
 		D685C6F72BD90367009AB097 /* OCRResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685C6F62BD90367009AB097 /* OCRResultView.swift */; };
 		D698BC9E2BBAB134007E6556 /* OCRPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698BC9D2BBAB134007E6556 /* OCRPracticeApp.swift */; };
-		D698BCA02BBAB134007E6556 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698BC9F2BBAB134007E6556 /* ContentView.swift */; };
 		D698BCA22BBAB135007E6556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D698BCA12BBAB135007E6556 /* Assets.xcassets */; };
 		D698BCA52BBAB135007E6556 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D698BCA42BBAB135007E6556 /* Preview Assets.xcassets */; };
 		D698BCAC2BBAB183007E6556 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698BCAB2BBAB183007E6556 /* Scanner.swift */; };
@@ -30,7 +29,6 @@
 		D685C6F62BD90367009AB097 /* OCRResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultView.swift; sourceTree = "<group>"; };
 		D698BC9A2BBAB134007E6556 /* OCRPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D698BC9D2BBAB134007E6556 /* OCRPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRPracticeApp.swift; sourceTree = "<group>"; };
-		D698BC9F2BBAB134007E6556 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D698BCA12BBAB135007E6556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D698BCA42BBAB135007E6556 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D698BCAB2BBAB183007E6556 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				D698BC9D2BBAB134007E6556 /* OCRPracticeApp.swift */,
 				D685C6F22BD8E91D009AB097 /* View */,
 				D685C6F12BD8E919009AB097 /* Utils */,
-				D698BC9F2BBAB134007E6556 /* ContentView.swift */,
 				D698BCA12BBAB135007E6556 /* Assets.xcassets */,
 				D698BCA32BBAB135007E6556 /* Preview Content */,
 			);
@@ -193,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D698BCA02BBAB134007E6556 /* ContentView.swift in Sources */,
 				D698BCAC2BBAB183007E6556 /* Scanner.swift in Sources */,
 				D685C6F42BD8E930009AB097 /* Extension.swift in Sources */,
 				D685C6DD2BD8B793009AB097 /* CameraViewModel.swift in Sources */,
